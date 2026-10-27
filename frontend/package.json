@@ -1,0 +1,9 @@
+{
+  "name": "pixel-izakaya-client",
+  "version": "1.0.0",
+  "description": "Cliente Frontend Pixel Art Canvas",
+  "private": true,
+  "scripts": {
+    "start": "echo 'Abre index.html directamente en el navegador'"
+  }
+}

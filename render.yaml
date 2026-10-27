@@ -1,0 +1,14 @@
+# Opcional: en Render usa "New > Blueprint" y elige este repositorio.
+services:
+  - type: web
+    name: pixel-izakaya
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run start:backend
+    healthCheckPath: /health
+    envVars:
+      - key: SAVE_SECRET
+        generateValue: true     # Render crea un secreto aleatorio y lo mantiene entre despliegues
+      - key: ALLOWED_ORIGIN
+        sync: false             # Te lo pide al crear: la URL de Vercel (sin "/" final). Puede ir vacío al inicio.

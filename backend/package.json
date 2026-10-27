@@ -1,0 +1,15 @@
+{
+  "name": "pixel-izakaya-server",
+  "version": "1.0.0",
+  "description": "API Backend Autoritativa",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test tests/security.test.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}

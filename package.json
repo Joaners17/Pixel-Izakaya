@@ -1,0 +1,25 @@
+{
+"name": "pixel-izakaya-fullstack",
+"version": "1.0.0",
+"description": "Juego 2D Pixel Art Fullstack Industrial - Arquitectura de Servidor Autoritativo con Secure Coding",
+"private": true,
+"workspaces": [
+"backend",
+"frontend"
+],
+"scripts": {
+"start:backend": "npm --prefix backend start",
+"start:frontend": "npm --prefix frontend start",
+"test:backend": "npm --prefix backend test"
+},
+"keywords": [
+"game",
+"fullstack",
+"node",
+"express",
+"secure-coding",
+"jest"
+],
+"author": "Magochix",
+"license": "MIT"
+}
