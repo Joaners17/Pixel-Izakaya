@@ -600,11 +600,11 @@ export class GameStateManager {
       if (!c) { h.t = 1; return; }
       const d = DISHES[c.order];
       for (const n of d.ing) this.storage[n]--;
-      c.cooking = true; h.target = c.id; h.dish = c.order; h.phase = 'cook'; h.dur = h.t = 2 + d.ing.length;
+      c.cooking = true; h.target = c.id; h.dish = c.order; h.phase = 'cook'; h.dur = h.t = (2 + d.ing.length)/3;
     } else {
       const c = this.customers.find(x => x.id === h.target && x.state === 'waiting');
       if (c) this.finishServe(c, c.order);
-      h.phase = 'idle'; h.target = null; h.dish = null; h.t = 0.8;
+      h.phase = 'idle'; h.target = null; h.dish = null; h.t = 0.8/3;
     }
   }
 

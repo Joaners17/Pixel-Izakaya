@@ -5,7 +5,7 @@ const MOVE_KEYS = ['w', 'a', 's', 'd', 'arrowup', 'arrowdown', 'arrowleft', 'arr
 export class Player {
   constructor() {
     this.x = 300; this.y = 270; this.w = 16; this.h = 24;
-    this.speed = 500; this.facing = 1; this.walk = 0; this.moving = false;
+    this.speed = 150; this.facing = 1; this.walk = 0; this.moving = false;
     this.keys = new Set();
     window.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT') return;
