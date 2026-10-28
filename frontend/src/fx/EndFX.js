@@ -63,7 +63,7 @@ export class EndFX {
       ctx.fillStyle = '#fde68a'; ctx.font = '22px "Press Start 2P", monospace'; ctx.fillText('¡FELICIDADES!', w / 2, 205);
       ctx.fillStyle = '#fff'; ctx.font = '28px VT323, monospace'; ctx.fillText(this.owner, w / 2, 238);
       ctx.fillStyle = '#fbbf24'; ctx.font = '22px VT323, monospace';
-      ctx.fillText('Tu izakaya llegó al 10% de valoración y gana una estrella', w / 2, 264);
+      ctx.fillText('Tu izakaya llegó al 9% de valoración y gana una estrella', w / 2, 264);
       if (this.stars <= 8) {
         const x0 = w / 2 - (this.stars - 1) * 13;
         for (let i = 0; i < this.stars; i++) star(ctx, x0 + i * 26, 292, 10, 4.5, 0, '#fbbf24');
