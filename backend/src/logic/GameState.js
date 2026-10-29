@@ -60,7 +60,8 @@ export const DISHES = {
 // Valoración (%). Ajusta estos números para balancear la dificultad.
 const RATING = {
   start: 2.0,     // valoración inicial
-  goal: 9,       // meta: solo alcanzable en el nivel 19 (el tope sube con cada nivel)
+  goal: 10, 
+  win:9,      // meta: solo alcanzable en el nivel 19 (el tope sube con cada nivel)
   capBase: 2.5,   // tope en el nivel 1
   like3: 0.12,    // cliente encantado (servido rápido)
   like2: 0.06,    // cliente satisfecho
@@ -175,7 +176,7 @@ export class GameStateManager {
     if (this.rating <= 0) {
       this.status = 'lost';
       this.notify('bad', `${this.owner}, tu izakaya perdió toda su valoración...`);
-    } else if (this.level >= MAX_LEVEL && this.rating >= RATING.goal) {
+    } else if (this.level >= MAX_LEVEL && this.rating >= RATING.win) {
       this.status = 'won';
       this.stars++;
       this.notify('levelup', '¡Tu izakaya llegó al 9% de valoración!');
